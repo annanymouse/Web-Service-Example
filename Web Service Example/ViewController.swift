@@ -11,7 +11,7 @@ import SwiftyJSON
 import AFNetworking
 import LTMorphingLabel
 
-class ViewController: UIViewController, LTMorphingLabelDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var forecastLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -31,14 +31,19 @@ class ViewController: UIViewController, LTMorphingLabelDelegate {
                     self.forecastLabel.text = forecast }
                 if let city = json["city"]["name"].string {
                     self.cityLabel.text = city }
-                self.temperatureLabel.morphingCharacterDelay = 9
-                let temperature = String(json["list"][0]["temp"]["day"])
-                    self.temperatureLabel.text = temperature
-                    self.temperatureLabel.morphingCharacterDelay = 0.026
-                    self.temperatureLabel.morphingDuration = 0.60
-                    self.temperatureLabel.morphingEnabled = true
-                    self.temperatureLabel.morphingProgress = 0.00
+                let temperature = json["list"][0]["temp"]["day"] //{
+                   self.temperatureLabel.text = String(temperature)
+//                    self.temperatureLabel.morphingCharacterDelay = 0.026
+//                    self.temperatureLabel.morphingDuration = 0.60
+//                    self.temperatureLabel.morphingEnabled = true
+//                    self.temperatureLabel.morphingProgress = 0.00
                     self.temperatureLabel.morphingEffect = .Burn
+                if temperature > 90.0 {
+                    self.view.backgroundColor = UIColor.redColor()
+                } else {
+                    self.view.backgroundColor = UIColor.blueColor()
+                }
+                //}
                 })
             {(operation:AFHTTPRequestOperation?, error:NSError) -> Void in
                 print("Error: " + error.localizedDescription)}
