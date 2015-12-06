@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		492EDD679C891DCBD5AC06C9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E585A1022DE295A00BAE49 /* libPods.a */; };
+		3FE364F5CD1B0463830D941B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4D080F34CF10A03B978B29 /* Pods.framework */; };
+		400B5261961744B577A95490 /* Pods_Web_Service_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7131EFB30C22807892757620 /* Pods_Web_Service_Example.framework */; };
 		9562F2E11C044C0300BEEC57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F2E01C044C0300BEEC57 /* AppDelegate.swift */; };
 		9562F2E31C044C0300BEEC57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F2E21C044C0300BEEC57 /* ViewController.swift */; };
 		9562F2E61C044C0300BEEC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9562F2E41C044C0300BEEC57 /* Main.storyboard */; };
@@ -16,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29E585A1022DE295A00BAE49 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131EFB30C22807892757620 /* Pods_Web_Service_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Web_Service_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D4723F4369336EEEF47981D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9562F2DD1C044C0300BEEC57 /* Web Service Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Web Service Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9562F2E01C044C0300BEEC57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		9562F2EA1C044C0300BEEC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9562F2EC1C044C0300BEEC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9590B9FB1C04ABA4008A7049 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		AC4D080F34CF10A03B978B29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F0DFF7FE80DB25CF4D4FE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -34,7 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				492EDD679C891DCBD5AC06C9 /* libPods.a in Frameworks */,
+				3FE364F5CD1B0463830D941B /* Pods.framework in Frameworks */,
+				400B5261961744B577A95490 /* Pods_Web_Service_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +88,8 @@
 		C7320F1994D6E1C91F9BE3AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				29E585A1022DE295A00BAE49 /* libPods.a */,
+				AC4D080F34CF10A03B978B29 /* Pods.framework */,
+				7131EFB30C22807892757620 /* Pods_Web_Service_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Web Service Example/Pods-Web Service Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		91E7A4507A7ADF3482145D49 /* Copy Pods Resources */ = {
@@ -202,7 +206,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Web Service Example/Pods-Web Service Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
