@@ -24,8 +24,8 @@ class ViewController: UIViewController {
         self.temperatureLabel.text = ""
         self.cityLabel.text = ""
         
-        //instantiate a gray Activity Indicator View
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        //instantiate a WhiteLarge Activity Indicator View
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)        
         //add the activity to the ViewController's view
         view.addSubview(activityIndicatorView)
         //position the Activity Indicator View in the center of the view
@@ -39,6 +39,10 @@ class ViewController: UIViewController {
             success: { (operation:AFHTTPRequestOperation, responseObject:AnyObject) -> Void in
                 print("Response: " + responseObject.description)
                 let json = JSON(responseObject)
+//                if json {
+//                    activityIndicatorView.stopAnimating()
+//                    activityIndicatorView.removeFromSuperview()
+//                }
                 
                 if let forecast = json["list"][0]["weather"][0]["description"].string {
                     self.forecastLabel.text = forecast }
@@ -46,7 +50,7 @@ class ViewController: UIViewController {
                     self.cityLabel.text = city }
                 let temperature = json["list"][0]["temp"]["day"].doubleValue //{
                    self.temperatureLabel.text = String(temperature)
-                    self.temperatureLabel.morphingEffect = .Anvil
+                    self.temperatureLabel.morphingEffect = .Sparkle
                 if temperature > 90.0 {
                     self.view.backgroundColor = UIColor.redColor()
                 } else if temperature < 50.0 {
