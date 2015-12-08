@@ -20,6 +20,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.forecastLabel.text = ""
+        self.temperatureLabel.text = ""
+        self.cityLabel.text = ""
+        
+        //instantiate a gray Activity Indicator View
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        //add the activity to the ViewController's view
+        view.addSubview(activityIndicatorView)
+        //position the Activity Indicator View in the center of the view
+        activityIndicatorView.center = view.center
+        //tell the Activity Indicator View to begin animating
+        activityIndicatorView.startAnimating()
+        
         let manager = AFHTTPRequestOperationManager()
         manager.GET("http://api.openweathermap.org/data/2.5/forecast/daily?id=5359777&mode=json&units=imperial&cnt=1&appid=29b46f039fd2f9053f7d2c27f985f9d2",
             parameters: nil,
@@ -31,19 +44,18 @@ class ViewController: UIViewController {
                     self.forecastLabel.text = forecast }
                 if let city = json["city"]["name"].string {
                     self.cityLabel.text = city }
-                let temperature = json["list"][0]["temp"]["day"] //{
+                let temperature = json["list"][0]["temp"]["day"].doubleValue //{
                    self.temperatureLabel.text = String(temperature)
-//                    self.temperatureLabel.morphingCharacterDelay = 0.026
-//                    self.temperatureLabel.morphingDuration = 0.60
-//                    self.temperatureLabel.morphingEnabled = true
-//                    self.temperatureLabel.morphingProgress = 0.00
-                    self.temperatureLabel.morphingEffect = .Burn
+                    self.temperatureLabel.morphingEffect = .Anvil
                 if temperature > 90.0 {
                     self.view.backgroundColor = UIColor.redColor()
-                } else {
+                } else if temperature < 50.0 {
                     self.view.backgroundColor = UIColor.blueColor()
+                } else {
+                    self.view.backgroundColor = UIColor.blackColor()
                 }
                 //}
+                activityIndicatorView.removeFromSuperview()
                 })
             {(operation:AFHTTPRequestOperation?, error:NSError) -> Void in
                 print("Error: " + error.localizedDescription)}

@@ -14,6 +14,10 @@
 		9562F2E61C044C0300BEEC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9562F2E41C044C0300BEEC57 /* Main.storyboard */; };
 		9562F2E81C044C0300BEEC57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9562F2E71C044C0300BEEC57 /* Assets.xcassets */; };
 		9562F2EB1C044C0300BEEC57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9562F2E91C044C0300BEEC57 /* LaunchScreen.storyboard */; };
+		959EF3A11C169EAD001D06A5 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 959EF39C1C169EAD001D06A5 /* Fire.png */; };
+		959EF3A21C169EAD001D06A5 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 959EF39D1C169EAD001D06A5 /* Fragment.png */; };
+		959EF3A31C169EAD001D06A5 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 959EF39E1C169EAD001D06A5 /* Smoke.png */; };
+		959EF3A41C169EAD001D06A5 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 959EF39F1C169EAD001D06A5 /* Sparkle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		9562F2EA1C044C0300BEEC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9562F2EC1C044C0300BEEC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9590B9FB1C04ABA4008A7049 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		959EF39C1C169EAD001D06A5 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fire.png; path = LTMorphingLabel/Particles/Fire.png; sourceTree = "<group>"; };
+		959EF39D1C169EAD001D06A5 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fragment.png; path = LTMorphingLabel/Particles/Fragment.png; sourceTree = "<group>"; };
+		959EF39E1C169EAD001D06A5 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smoke.png; path = LTMorphingLabel/Particles/Smoke.png; sourceTree = "<group>"; };
+		959EF39F1C169EAD001D06A5 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sparkle.png; path = LTMorphingLabel/Particles/Sparkle.png; sourceTree = "<group>"; };
 		AC4D080F34CF10A03B978B29 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F0DFF7FE80DB25CF4D4FE7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +83,7 @@
 		9562F2DF1C044C0300BEEC57 /* Web Service Example */ = {
 			isa = PBXGroup;
 			children = (
+				959EF3A01C169EAD001D06A5 /* Resources */,
 				9562F2E01C044C0300BEEC57 /* AppDelegate.swift */,
 				9562F2E21C044C0300BEEC57 /* ViewController.swift */,
 				9562F2E41C044C0300BEEC57 /* Main.storyboard */,
@@ -83,6 +92,18 @@
 				9562F2EC1C044C0300BEEC57 /* Info.plist */,
 			);
 			path = "Web Service Example";
+			sourceTree = "<group>";
+		};
+		959EF3A01C169EAD001D06A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				959EF39C1C169EAD001D06A5 /* Fire.png */,
+				959EF39D1C169EAD001D06A5 /* Fragment.png */,
+				959EF39E1C169EAD001D06A5 /* Smoke.png */,
+				959EF39F1C169EAD001D06A5 /* Sparkle.png */,
+			);
+			name = Resources;
+			path = ../Pods/LTMorphingLabel;
 			sourceTree = "<group>";
 		};
 		C7320F1994D6E1C91F9BE3AD /* Frameworks */ = {
@@ -155,9 +176,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959EF3A21C169EAD001D06A5 /* Fragment.png in Resources */,
 				9562F2EB1C044C0300BEEC57 /* LaunchScreen.storyboard in Resources */,
+				959EF3A11C169EAD001D06A5 /* Fire.png in Resources */,
 				9562F2E81C044C0300BEEC57 /* Assets.xcassets in Resources */,
 				9562F2E61C044C0300BEEC57 /* Main.storyboard in Resources */,
+				959EF3A41C169EAD001D06A5 /* Sparkle.png in Resources */,
+				959EF3A31C169EAD001D06A5 /* Smoke.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
