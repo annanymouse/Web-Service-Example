@@ -37,8 +37,8 @@ Here is an example of how to set the morphingEffect property of your Label (that
 
 ```objective-c
 let temperature = json["list"][0]["temp"]["day"].doubleValue //{
-                   self.temperatureLabel.text = String(temperature)
-                                       self.temperatureLabel.morphingEffect = .Anvil
+    self.temperatureLabel.text = String(temperature)
+    self.temperatureLabel.morphingEffect = .Anvil
 ```
 
-This 'mini-guide' is not perfect but hopefully will give you some guidance on adding and implementing LTMorphing effects to your Swift project.
+This 'mini-guide' is not perfect but hopefully will give you some guidance on adding and implementing LTMorphingLabel effects to your Swift project.
